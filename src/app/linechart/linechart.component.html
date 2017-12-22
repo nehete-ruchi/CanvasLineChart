@@ -1,0 +1,62 @@
+<div style="padding:10px;">
+        <div id="inputdiv">
+<div class="row">
+        <div class="col-xs-12 col-12 col-md-4">
+                <span>Start DateTime :</span>                
+               <br />
+                <input type="datetime-local"
+                class="form-control"
+                placeholder="Start Date"
+                step="1"
+                required
+                [(ngModel)] = "startDate" 
+                autofocus>
+                <span class="validity"></span>
+        </div>
+</div>
+<div class="row">
+        <div class="col-xs-12 col-12 col-md-4">
+                &nbsp;
+        </div>
+</div>
+<div class="row">
+        <div class="col-xs-12 col-12 col-md-4">
+                <span>End DateTime :</span>
+               <br />
+                <input type="datetime-local"
+                class="form-control"
+                placeholder="End Date"
+                step="1"
+                [(ngModel)] = "endDate" required>
+                <span class="validity"></span>
+        </div>
+</div>
+<div class="row">
+        <div class="col-xs-12 col-12 col-md-4">
+                &nbsp;
+        </div>
+</div>
+<div class="row">
+        <div class="col-xs-12 col-12 col-md-4" style="color:brown">
+               <span>{{infoMessage}}</span>
+        </div>
+</div>
+<div class="row">
+        <div class="col-xs-12 col-12 col-md-4">
+                <input type="button" value="Get Initial Data" (click)="getInitialData()">
+                &nbsp;&nbsp;
+                <input type="button" value="Start Streaming" (click)="startStreaming()">
+                &nbsp;&nbsp;
+                <input type="button" value="End Streaming" (click)="stopStreaming()">
+        </div>
+</div>
+</div>
+<div class="row">
+        <div class="col-xs-12 col-12 col-md-12"  width="1000" height="1000">
+                <canvas #linechartCanvas id="linechartCanvas" width="1000" height="1000" >                                
+                </canvas>
+                <br />
+                <canvas id="tip" width=200 height=25></canvas>                
+        </div>
+</div>
+</div>
